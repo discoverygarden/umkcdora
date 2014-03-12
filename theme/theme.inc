@@ -17,5 +17,7 @@
  */
 function template_preprocess_umkcdora_collection_info(array &$variables) {
   module_load_include('inc', 'islandora', 'includes/utilities');
+  drupal_add_js('misc/collapse.js');
+  drupal_add_js('misc/form.js');
   $variables['parent_collections'] = islandora_get_parents_from_rels_ext($variables['islandora_object']);
 }
